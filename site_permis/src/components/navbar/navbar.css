@@ -1,0 +1,26 @@
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar .MuiButton-root {
+  transition: all 0.3s ease;
+}
+
+.navbar .MuiButton-root:hover {
+  transform: translateY(-2px);
+}
+
+.navbar .MuiDrawer-paper {
+  background-color: white;
+}
+
+.navbar .MuiListItem-root:hover {
+  background-color: #fff3e0 !important;
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar .MuiBox-root {
+    display: none !important;
+  }
+}

@@ -1,0 +1,35 @@
+.footer {
+  transition: all 0.3s ease;
+}
+
+.footer .MuiIconButton-root {
+  transition: all 0.3s ease;
+}
+
+.footer .MuiIconButton-root:hover {
+  transform: scale(1.1);
+  background-color: #ff6b35 !important;
+}
+
+.footer .MuiLink-root {
+  transition: color 0.3s ease;
+}
+
+.footer .MuiLink-root:hover {
+  color: #ff6b35 !important;
+}
+
+.footer .MuiChip-root {
+  transition: all 0.3s ease;
+}
+
+.footer .MuiChip-root:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .footer .MuiStack-root {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}
