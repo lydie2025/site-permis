@@ -21,10 +21,10 @@ import {
   Send,
   CheckCircle
 } from '@mui/icons-material';
-import Topbar from '../components/topbar/Topbar';
-import Header from '../components/header/Header';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
+import Topbar from '../../components/topbar/Topbar';
+import Header from '../../components/header/Header';
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

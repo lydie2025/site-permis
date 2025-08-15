@@ -1,11 +1,10 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Home } from '../pages/home/Home'
-import { Accueil } from '../pages/Accueil'
-import { Services } from '../pages/Services'
-import { Contact } from '../pages/Contact'
+import Home from '../pages/home/Home'
+import Accueil from '../pages/accueil/Accueil'
+import Services from '../pages/services/Services'
+import Contact from '../pages/contact/Contact'
 
-export const AppRoutes = () => {
+export default function AppRoutes () {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -13,5 +12,5 @@ export const AppRoutes = () => {
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
-  )
+  );
 }

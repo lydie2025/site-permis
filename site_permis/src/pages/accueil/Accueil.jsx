@@ -25,12 +25,12 @@ import {
   People,
   Security,
   Speed,
-  Trust
+  Verified 
 } from '@mui/icons-material';
-import Topbar from '../components/topbar/Topbar';
-import Header from '../components/header/Header';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer';
+import Topbar from '../../components/topbar/Topbar';
+import Header from '../../components/header/Header';
+import Navbar from '../../components/navbar/Navbar';
+import Footer from '../../components/footer/Footer';
 
 const Accueil = () => {
   const stats = [
