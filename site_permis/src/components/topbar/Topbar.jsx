@@ -21,19 +21,19 @@ const Topbar = () => {
           {/* Informations de contact */}
           <Stack direction="row" spacing={3} alignItems="center">
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Phone sx={{ fontSize: 16, color: '#ff6b35' }} />
+              <Phone sx={{ fontSize: 16, color: '#1946a3' }} />
               <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
                 +33 1 23 45 67 89
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Email sx={{ fontSize: 16, color: '#ff6b35' }} />
+              <Email sx={{ fontSize: 16, color: '#1946a3' }} />
               <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
                 contact@globalcarconsulting.fr
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <LocationOn sx={{ fontSize: 16, color: '#ff6b35' }} />
+              <LocationOn sx={{ fontSize: 16, color: '#1946a3' }} />
               <Typography variant="body2" sx={{ fontSize: '0.875rem' }}>
                 Paris, France
               </Typography>
@@ -44,19 +44,19 @@ const Topbar = () => {
           <Stack direction="row" spacing={1}>
             <IconButton 
               size="small" 
-              sx={{ color: 'white', '&:hover': { color: '#ff6b35' } }}
+              sx={{ color: 'white', '&:hover': { color: '#1946a3' } }}
             >
               <Facebook />
             </IconButton>
             <IconButton 
               size="small" 
-              sx={{ color: 'white', '&:hover': { color: '#ff6b35' } }}
+              sx={{ color: 'white', '&:hover': { color: '#1946a3' } }}
             >
               <Instagram />
             </IconButton>
             <IconButton 
               size="small" 
-              sx={{ color: 'white', '&:hover': { color: '#ff6b35' } }}
+              sx={{ color: 'white', '&:hover': { color: '#1946a3' } }}
             >
               <LinkedIn />
             </IconButton>

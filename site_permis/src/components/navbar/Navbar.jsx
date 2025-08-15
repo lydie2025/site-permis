@@ -53,7 +53,7 @@ const Navbar = () => {
         <Box sx={{ 
           width: 40, 
           height: 40, 
-          backgroundColor: '#ff6b35',
+          backgroundColor: '#a26175',
           borderRadius: '50%',
           display: 'flex',
           alignItems: 'center',
@@ -74,7 +74,7 @@ const Navbar = () => {
             button 
             onClick={() => handleNavigation(item.path)}
             sx={{
-              backgroundColor: isActive(item.path) ? '#fff3e0' : 'transparent',
+              backgroundColor: isActive(item.path) ? '#a26175' : 'transparent',
               '&:hover': { backgroundColor: '#fff3e0' }
             }}
           >

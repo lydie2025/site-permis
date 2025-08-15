@@ -39,6 +39,16 @@ const Hero = () => {
       icon: <School sx={{ fontSize: 40, color: '#ff6b35' }} />,
       title: 'Auto-École',
       description: 'Formation et accompagnement personnalisé'
+    },
+    {
+      icon: <Assignment sx={{ fontSize: 40, color: '#ff6b35' }} />,
+      title: 'Immatricution',
+      description: 'Démarches pour immatriculation et plaques'
+    },
+    {
+      icon: <Assignment sx={{ fontSize: 40, color: '#ff6b35' }} />,
+      title: 'Permis',
+      description: 'Procédures douanières simplifiées'
     }
   ];
 
