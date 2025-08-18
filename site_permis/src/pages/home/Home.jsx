@@ -8,6 +8,8 @@ import AboutSection from '../../components/about-section/AboutSection';
 import CTASection from '../../components/cta-section/CTASection';
 import Footer from '../../components/footer/Footer';
 import { Box } from '@mui/material';
+import Temoignages from '../../components/temoignage/Temoignages';
+import About from '../../components/about/About';
 
 const Home = () => {
   return (
@@ -20,6 +22,8 @@ const Home = () => {
       <Header />
       <Navbar />
       <Hero />
+      <About />
+      <Temoignages />
       <Footer />
     </Box>
   );

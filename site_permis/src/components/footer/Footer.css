@@ -1,72 +1,27 @@
 .footer {
   transition: all 0.3s ease;
+  background-color: #1a1a1a !important;
 }
 
-/* Animations pour les icônes sociales */
-.footer .social-icon {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .social-icon:hover {
-  transform: translateY(-3px) rotate(5deg);
-}
-
-/* Animations pour les éléments de service */
-.footer .service-item {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .service-item:hover {
-  transform: translateX(8px);
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-/* Animations pour les liens rapides */
-.footer .quick-link {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .quick-link:hover {
-  transform: translateX(8px);
-  background-color: rgba(251, 191, 36, 0.1);
-}
-
-/* Animations pour les éléments de contact */
-.footer .contact-item {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .contact-item:hover {
-  transform: translateX(8px);
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-/* Animations pour les liens légaux */
-.footer .legal-link {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer .legal-link:hover {
-  transform: translateY(-2px);
-}
-
-/* Animation pour le logo */
-.footer .logo-container {
+.footer .MuiIconButton-root {
   transition: all 0.3s ease;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .logo-container:hover {
-  transform: scale(1.05);
+.footer .MuiIconButton-root:hover {
+  transform: scale(1.1);
+  background-color: #a26175 !important;
 }
 
-/* Animation pour la newsletter */
-.footer .newsletter-box {
-  transition: all 0.3s ease;
+.footer .MuiLink-root {
+  transition: color 0.3s ease;
+  color: #cccccc;
+  text-decoration: none;
 }
 
-.footer .newsletter-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+.footer .MuiLink-root:hover {
+  color: #a26175 !important;
 }
 
 /* Animation pour les horaires */

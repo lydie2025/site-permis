@@ -31,6 +31,40 @@
   transform: translateY(-2px);
 }
 
+/* Animation pour les boutons d'action */
+.MuiAppBar-root .action-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MuiAppBar-root .action-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1946a3, #a26175) !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(25, 70, 163, 0.3);
+}
+
+.navbar .MuiButton-root.active {
+  background: linear-gradient(135deg, #1946a3, #a26175) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(25, 70, 163, 0.3);
+}
+
+.navbar .logo {
+  font-weight: 800 !important;
+  color: #1946a3 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #a26175 !important;
+  transform: scale(1.05);
+}
+
+.navbar .logo-accent {
+  color: #a26175 !important;
+}
+
 /* Animation pour le menu mobile */
 .MuiDrawer-paper {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
