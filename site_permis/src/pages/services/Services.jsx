@@ -29,11 +29,12 @@ import Topbar from '../../components/topbar/Topbar';
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
+import './services.css';
 
 const Services = () => {
   const services = [
     {
-      icon: <DirectionsCar sx={{ fontSize: 60, color: '#ff6b35' }} />,
+      icon: <DirectionsCar />,
       title: 'Permis de Conduire',
       description: 'Obtention et gestion complète de votre permis de conduire',
       features: [
@@ -44,11 +45,10 @@ const Services = () => {
         'Renouvellement et duplicata'
       ],
       price: 'À partir de 150€',
-      duration: '2-4 semaines',
-      color: '#ff6b35'
+      duration: '2-4 semaines'
     },
     {
-      icon: <Assignment sx={{ fontSize: 60, color: '#2196f3' }} />,
+      icon: <Assignment />,
       title: 'Carte Grise & Plaques',
       description: 'Démarches pour immatriculation et plaques d\'immatriculation',
       features: [
@@ -59,11 +59,10 @@ const Services = () => {
         'Certificat de cession'
       ],
       price: 'À partir de 80€',
-      duration: '1-2 semaines',
-      color: '#2196f3'
+      duration: '1-2 semaines'
     },
     {
-      icon: <Assignment sx={{ fontSize: 60, color: '#4caf50' }} />,
+      icon: <Assignment />,
       title: 'Dédouanement',
       description: 'Procédures douanières simplifiées pour vos véhicules',
       features: [
@@ -74,11 +73,10 @@ const Services = () => {
         'Accompagnement douanier'
       ],
       price: 'À partir de 200€',
-      duration: '3-5 jours',
-      color: '#4caf50'
+      duration: '3-5 jours'
     },
     {
-      icon: <School sx={{ fontSize: 60, color: '#9c27b0' }} />,
+      icon: <School />,
       title: 'Auto-École',
       description: 'Formation et accompagnement personnalisé au permis',
       features: [
@@ -89,8 +87,7 @@ const Services = () => {
         'Permis à points'
       ],
       price: 'À partir de 1200€',
-      duration: '3-6 mois',
-      color: '#9c27b0'
+      duration: '3-6 mois'
     }
   ];
 
@@ -114,37 +111,24 @@ const Services = () => {
   ];
 
   return (
-    <Box sx={{ minHeight: '100vh' }}>
+    <Box className="services-page">
       <Topbar />
       <Header />
       <Navbar />
       
       {/* Hero Section */}
-      <Box sx={{ 
-        background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
-        color: 'white',
-        py: { xs: 6, md: 10 }
-      }}>
+      <Box className="hero-section">
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography 
               variant="h2" 
-              sx={{ 
-                fontWeight: 'bold',
-                mb: 3,
-                fontSize: { xs: '2.5rem', md: '3.5rem' }
-              }}
+              className="hero-title"
             >
               Nos Services
             </Typography>
             <Typography 
               variant="h5" 
-              sx={{ 
-                color: '#cccccc',
-                maxWidth: '800px',
-                mx: 'auto',
-                lineHeight: 1.6
-              }}
+              className="hero-subtitle"
             >
               Découvrez notre gamme complète de services automobiles. 
               Nous simplifions vos démarches administratives et vous accompagnons 
@@ -155,22 +139,13 @@ const Services = () => {
       </Box>
 
       {/* Services Section */}
-      <Container maxWidth="lg" sx={{ py: { xs: 6, md: 10 } }}>
+      <Container maxWidth="lg" className="services-list">
         <Grid container spacing={4}>
           {services.map((service, index) => (
             <Grid item xs={12} md={6} key={index}>
-              <Card sx={{ 
-                height: '100%',
-                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                borderRadius: 3,
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  transform: 'translateY(-10px)',
-                  boxShadow: '0 8px 30px rgba(0,0,0,0.15)'
-                }
-              }}>
-                <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                  <Box sx={{ mb: 3 }}>
+              <Card className="service-card">
+                <CardContent className="service-content">
+                  <Box className="service-icon">
                     {service.icon}
                   </Box>
                   
@@ -179,7 +154,7 @@ const Services = () => {
                     sx={{ 
                       fontWeight: 'bold', 
                       mb: 2,
-                      color: service.color
+                      color: '#1946a3'
                     }}
                   >
                     {service.title}
@@ -187,37 +162,33 @@ const Services = () => {
                   
                   <Typography 
                     variant="body1" 
-                    sx={{ 
-                      mb: 3, 
-                      color: '#666',
-                      lineHeight: 1.6
-                    }}
+                    className="service-description"
                   >
                     {service.description}
                   </Typography>
 
-                  <Stack direction="row" spacing={2} sx={{ mb: 3, justifyContent: 'center' }}>
+                  <Stack direction="row" spacing={2} className="service-tags">
                     <Chip 
                       icon={<Euro />} 
                       label={service.price}
-                      sx={{ backgroundColor: service.color, color: 'white' }}
+                      sx={{ backgroundColor: '#1946a3', color: 'white' }}
                     />
                     <Chip 
                       icon={<Schedule />} 
                       label={service.duration}
                       variant="outlined"
-                      sx={{ borderColor: service.color, color: service.color }}
+                      sx={{ borderColor: '#a26175', color: '#a26175' }}
                     />
                   </Stack>
 
                   <Box sx={{ mb: 3 }}>
-                    <Typography variant="h6" sx={{ mb: 2, fontWeight: '600' }}>
+                    <Typography variant="h6" className="features-title">
                       Ce qui est inclus :
                     </Typography>
                     <Stack spacing={1} alignItems="flex-start">
                       {service.features.map((feature, idx) => (
-                        <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                          <CheckCircle sx={{ color: service.color, fontSize: 20 }} />
+                        <Box key={idx} className="feature-item">
+                          <CheckCircle sx={{ color: '#a26175', fontSize: 20 }} />
                           <Typography variant="body2">{feature}</Typography>
                         </Box>
                       ))}
@@ -231,8 +202,11 @@ const Services = () => {
                     fullWidth
                     size="large"
                     sx={{ 
-                      backgroundColor: service.color,
-                      '&:hover': { backgroundColor: service.color, opacity: 0.9 },
+                      background: 'linear-gradient(135deg, #1946a3, #a26175)',
+                      '&:hover': { 
+                        background: 'linear-gradient(135deg, #1946a3, #a26175)',
+                        opacity: 0.9 
+                      },
                       py: 1.5,
                       borderRadius: 2,
                       fontWeight: '600'
@@ -248,16 +222,11 @@ const Services = () => {
       </Container>
 
       {/* FAQ Section */}
-      <Box sx={{ backgroundColor: '#f8f9fa', py: { xs: 6, md: 10 } }}>
+      <Box className="faq-section">
         <Container maxWidth="lg">
           <Typography 
             variant="h3" 
-            sx={{ 
-              textAlign: 'center', 
-              fontWeight: 'bold',
-              mb: 6,
-              color: '#1a1a1a'
-            }}
+            className="faq-title"
           >
             Questions Fréquentes
           </Typography>
@@ -265,10 +234,7 @@ const Services = () => {
           <Grid container spacing={3}>
             {faq.map((item, index) => (
               <Grid item xs={12} md={6} key={index}>
-                <Accordion sx={{ 
-                  borderRadius: 2,
-                  boxShadow: '0 2px 10px rgba(0,0,0,0.1)'
-                }}>
+                <Accordion>
                   <AccordionSummary expandIcon={<ExpandMore />}>
                     <Typography variant="h6" sx={{ fontWeight: '600' }}>
                       {item.question}
@@ -287,11 +253,7 @@ const Services = () => {
       </Box>
 
       {/* CTA Section */}
-      <Box sx={{ 
-        backgroundColor: '#1a1a1a',
-        color: 'white',
-        py: { xs: 6, md: 10 }
-      }}>
+      <Box className="cta-section">
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography 
@@ -305,12 +267,7 @@ const Services = () => {
             </Typography>
             <Typography 
               variant="h6" 
-              sx={{ 
-                color: '#cccccc',
-                mb: 4,
-                maxWidth: '600px',
-                mx: 'auto'
-              }}
+              className="cta-subtitle"
             >
               Contactez-nous dès aujourd'hui pour un accompagnement personnalisé 
               et un devis gratuit pour vos démarches automobiles.
@@ -324,14 +281,7 @@ const Services = () => {
               <Button 
                 variant="contained" 
                 size="large"
-                sx={{ 
-                  backgroundColor: '#ff6b35',
-                  '&:hover': { backgroundColor: '#e55a2b' },
-                  px: 4,
-                  py: 2,
-                  borderRadius: 3,
-                  fontWeight: '600'
-                }}
+                className="cta-btn-orange"
               >
                 Demander un devis gratuit
               </Button>
@@ -339,18 +289,7 @@ const Services = () => {
               <Button 
                 variant="outlined" 
                 size="large"
-                sx={{ 
-                  borderColor: 'white',
-                  color: 'white',
-                  '&:hover': { 
-                    borderColor: '#ff6b35',
-                    backgroundColor: 'rgba(255, 107, 53, 0.1)'
-                  },
-                  px: 4,
-                  py: 2,
-                  borderRadius: 3,
-                  fontWeight: '600'
-                }}
+                className="cta-btn-white"
               >
                 Nous contacter
               </Button>

@@ -1,27 +1,123 @@
 .navbar {
   transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(25, 70, 163, 0.1);
+  box-shadow: 0 4px 30px rgba(25, 70, 163, 0.1);
 }
 
 .navbar .MuiButton-root {
   transition: all 0.3s ease;
+  color: #1946a3 !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 25px !important;
+  padding: 8px 20px !important;
 }
 
 .navbar .MuiButton-root:hover {
   transform: translateY(-2px);
+  background: linear-gradient(135deg, #1946a3, #a26175) !important;
+  color: white !important;
+  box-shadow: 0 8px 25px rgba(25, 70, 163, 0.3);
+}
+
+.navbar .MuiButton-root.active {
+  background: linear-gradient(135deg, #1946a3, #a26175) !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(25, 70, 163, 0.3);
+}
+
+.navbar .logo {
+  font-weight: 800 !important;
+  color: #1946a3 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #a26175 !important;
+  transform: scale(1.05);
+}
+
+.navbar .logo-accent {
+  color: #a26175 !important;
 }
 
 .navbar .MuiDrawer-paper {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(25, 70, 163, 0.1);
+}
+
+.navbar .MuiListItem-root {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  margin: 4px 8px;
 }
 
 .navbar .MuiListItem-root:hover {
-  background-color: #fff3e0 !important;
-  transition: background-color 0.3s ease;
+  background: linear-gradient(135deg, rgba(25, 70, 163, 0.1), rgba(162, 97, 117, 0.1)) !important;
+  transform: translateX(5px);
+}
+
+.navbar .MuiListItem-root.active {
+  background: linear-gradient(135deg, #1946a3, #a26175) !important;
+  color: white !important;
+}
+
+.navbar .MuiListItemText-primary {
+  font-weight: 600 !important;
+  color: #1946a3 !important;
+}
+
+.navbar .MuiListItem-root:hover .MuiListItemText-primary,
+.navbar .MuiListItem-root.active .MuiListItemText-primary {
+  color: white !important;
+}
+
+.navbar .MuiIconButton-root {
+  color: #1946a3 !important;
+  transition: all 0.3s ease;
+}
+
+.navbar .MuiIconButton-root:hover {
+  color: #a26175 !important;
+  transform: scale(1.1);
+  background: rgba(25, 70, 163, 0.1) !important;
+}
+
+.navbar .mobile-menu-button {
+  display: none !important;
 }
 
 @media (max-width: 768px) {
   .navbar .MuiBox-root {
     display: none !important;
   }
+  
+  .navbar .mobile-menu-button {
+    display: flex !important;
+  }
+  
+  .navbar .MuiDrawer-paper {
+    width: 280px !important;
+  }
+}
+
+/* Animation d'entrée */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar {
+  animation: slideDown 0.6s ease-out;
 }
 

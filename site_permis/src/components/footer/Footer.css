@@ -1,22 +1,27 @@
 .footer {
   transition: all 0.3s ease;
+  background-color: #1a1a1a !important;
 }
 
 .footer .MuiIconButton-root {
   transition: all 0.3s ease;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer .MuiIconButton-root:hover {
   transform: scale(1.1);
-  background-color: #ff6b35 !important;
+  background-color: #a26175 !important;
 }
 
 .footer .MuiLink-root {
   transition: color 0.3s ease;
+  color: #cccccc;
+  text-decoration: none;
 }
 
 .footer .MuiLink-root:hover {
-  color: #ff6b35 !important;
+  color: #a26175 !important;
 }
 
 .footer .MuiChip-root {

@@ -1,0 +1,71 @@
+.contact-page {
+  background-color: #f8f9fa;
+}
+
+.contact-hero {
+  background: linear-gradient(135deg, #1946a3, #a26175);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+.contact-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  margin-bottom: 1.5rem;
+  color: #1946a3;
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: #1946a3 !important;
+  font-weight: bold;
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #a26175 !important;
+}
+
+.why-card {
+  padding: 2rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.why-title {
+  margin-bottom: 1rem;
+  color: #1946a3;
+  font-weight: bold;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.why-item .icon {
+  color: #a26175;
+}
