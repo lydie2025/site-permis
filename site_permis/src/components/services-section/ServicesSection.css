@@ -1,0 +1,60 @@
+.services-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section .MuiCard-root {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.services-section .MuiCard-root:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+.services-section .MuiCard-root.highlight {
+  border: 2px solid #1648a1;
+  box-shadow: 0 8px 30px rgba(22, 72, 161, 0.2);
+}
+
+.services-section .MuiButton-root {
+  transition: all 0.3s ease;
+}
+
+.services-section .MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.services-section .MuiChip-root {
+  transition: all 0.3s ease;
+}
+
+.services-section .MuiChip-root:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .services-section .MuiTypography-h2 {
+    font-size: 2rem !important;
+  }
+  
+  .services-section .MuiTypography-h5 {
+    font-size: 1.1rem !important;
+  }
+  
+  .services-section .MuiGrid-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section .MuiTypography-h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .services-section .MuiCard-root {
+    margin: 0 1rem;
+  }
+} 

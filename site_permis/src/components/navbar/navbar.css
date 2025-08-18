@@ -1,27 +1,99 @@
-.navbar {
-  transition: all 0.3s ease;
+/* Navbar Styles */
+.MuiAppBar-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-.navbar .MuiButton-root {
-  transition: all 0.3s ease;
+/* Animation pour le logo */
+.MuiAppBar-root .logo-container {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar .MuiButton-root:hover {
+.MuiAppBar-root .logo-container:hover {
+  transform: scale(1.05);
+}
+
+/* Animation pour les boutons de navigation */
+.MuiAppBar-root .nav-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.MuiAppBar-root .nav-button:hover {
   transform: translateY(-2px);
 }
 
-.navbar .MuiDrawer-paper {
-  background-color: white;
+/* Animation pour les boutons d'action */
+.MuiAppBar-root .action-button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar .MuiListItem-root:hover {
-  background-color: #fff3e0 !important;
-  transition: background-color 0.3s ease;
+.MuiAppBar-root .action-button:hover {
+  transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .navbar .MuiBox-root {
-    display: none !important;
+/* Animation pour le menu mobile */
+.MuiDrawer-paper {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Animation pour les items du menu mobile */
+.MuiDrawer-paper .menu-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MuiDrawer-paper .menu-item:hover {
+  transform: translateX(5px);
+}
+
+/* Effet de focus pour l'accessibilité */
+.MuiAppBar-root button:focus-visible {
+  outline: 2px solid #1648a1;
+  outline-offset: 2px;
+}
+
+/* Animation d'entrée pour le drawer */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.MuiDrawer-paper {
+  animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .MuiAppBar-root {
+    backdrop-filter: blur(15px) !important;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar pour le drawer */
+.MuiDrawer-paper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.MuiDrawer-paper::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.MuiDrawer-paper::-webkit-scrollbar-thumb {
+  background: rgba(22, 72, 161, 0.3);
+  border-radius: 3px;
+}
+
+.MuiDrawer-paper::-webkit-scrollbar-thumb:hover {
+  background: rgba(22, 72, 161, 0.5);
 }
 

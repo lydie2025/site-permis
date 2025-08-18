@@ -1,0 +1,89 @@
+.about-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .MuiCard-root {
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.about-section .MuiCard-root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.about-section .MuiAvatar-root {
+  transition: all 0.3s ease;
+}
+
+.about-section .MuiAvatar-root:hover {
+  transform: scale(1.1);
+}
+
+.about-section .MuiButton-root {
+  transition: all 0.3s ease;
+}
+
+.about-section .MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.about-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.about-section .value-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.about-section .value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.about-section .cta-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .about-section .MuiTypography-h2 {
+    font-size: 2rem !important;
+  }
+  
+  .about-section .MuiTypography-h3 {
+    font-size: 1.75rem !important;
+  }
+  
+  .about-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section .MuiTypography-h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .about-section .MuiTypography-h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .about-section .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-section .value-card {
+    padding: 1rem;
+  }
+} 

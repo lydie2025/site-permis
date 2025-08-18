@@ -2,34 +2,156 @@
   transition: all 0.3s ease;
 }
 
-.footer .MuiIconButton-root {
+/* Animations pour les icônes sociales */
+.footer .social-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .social-icon:hover {
+  transform: translateY(-3px) rotate(5deg);
+}
+
+/* Animations pour les éléments de service */
+.footer .service-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .service-item:hover {
+  transform: translateX(8px);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Animations pour les liens rapides */
+.footer .quick-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .quick-link:hover {
+  transform: translateX(8px);
+  background-color: rgba(251, 191, 36, 0.1);
+}
+
+/* Animations pour les éléments de contact */
+.footer .contact-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .contact-item:hover {
+  transform: translateX(8px);
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Animations pour les liens légaux */
+.footer .legal-link {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .legal-link:hover {
+  transform: translateY(-2px);
+}
+
+/* Animation pour le logo */
+.footer .logo-container {
   transition: all 0.3s ease;
 }
 
-.footer .MuiIconButton-root:hover {
-  transform: scale(1.1);
-  background-color: #ff6b35 !important;
-}
-
-.footer .MuiLink-root {
-  transition: color 0.3s ease;
-}
-
-.footer .MuiLink-root:hover {
-  color: #ff6b35 !important;
-}
-
-.footer .MuiChip-root {
-  transition: all 0.3s ease;
-}
-
-.footer .MuiChip-root:hover {
+.footer .logo-container:hover {
   transform: scale(1.05);
 }
 
+/* Animation pour la newsletter */
+.footer .newsletter-box {
+  transition: all 0.3s ease;
+}
+
+.footer .newsletter-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Animation pour les horaires */
+.footer .hours-box {
+  transition: all 0.3s ease;
+}
+
+.footer .hours-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.2);
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   .footer .MuiStack-root {
     flex-direction: column !important;
     gap: 1rem !important;
   }
+  
+  .footer .social-icon {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .footer .service-item:hover,
+  .footer .quick-link:hover,
+  .footer .contact-item:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .MuiContainer-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .footer .MuiGrid-container {
+    gap: 2rem !important;
+  }
+}
+
+/* Animation d'apparition pour les éléments */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer .MuiGrid-item {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.footer .MuiGrid-item:nth-child(1) { animation-delay: 0.1s; }
+.footer .MuiGrid-item:nth-child(2) { animation-delay: 0.2s; }
+.footer .MuiGrid-item:nth-child(3) { animation-delay: 0.3s; }
+.footer .MuiGrid-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* Effet de brillance pour les titres */
+.footer .section-title::after {
+  transition: width 0.3s ease;
+}
+
+.footer .section-title:hover::after {
+  width: 60px;
+}
+
+/* Animation pour le bouton retour en haut */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.footer .scroll-to-top:hover {
+  animation: bounce 1s infinite;
 }

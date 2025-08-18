@@ -1,0 +1,106 @@
+.cta-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section .MuiButton-root {
+  transition: all 0.3s ease;
+}
+
+.cta-section .MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.cta-section .contact-form {
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cta-section .contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.cta-section .stats-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-section .stats-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-section .guarantee-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-section .guarantee-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-section .background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  background-image: 
+    radial-gradient(circle at 20% 50%, white 0%, transparent 50%), 
+    radial-gradient(circle at 80% 20%, white 0%, transparent 50%);
+  background-size: 400px 400px;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .cta-section .MuiTypography-h2 {
+    font-size: 2rem !important;
+  }
+  
+  .cta-section .MuiTypography-h3 {
+    font-size: 1.75rem !important;
+  }
+  
+  .cta-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-section .guarantee-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section .MuiTypography-h2 {
+    font-size: 1.75rem !important;
+  }
+  
+  .cta-section .MuiTypography-h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .cta-section .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-section .contact-form {
+    margin: 0 1rem;
+  }
+  
+  .cta-section .stats-card {
+    padding: 1rem;
+  }
+} 
