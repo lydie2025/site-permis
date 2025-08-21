@@ -443,7 +443,7 @@ const Hero = () => {
           {/* En-tête de la section */}
           <Box sx={{ textAlign: 'center', mb: { xs: 6, sm: 8 }, px: { xs: 1, sm: 0 } }}>
             <Chip
-              label="NOS SERVICES"
+              label="HISTORIQUE"
               sx={{
                 backgroundColor: '#1648a1',
                 color: 'white',
@@ -486,11 +486,11 @@ const Hero = () => {
           {/* Grille des services */}
           <Grid container spacing={{ xs: 3, sm: 4 }} justifyContent="center">
             {services.map((service, index) => (
-              <Grid item xs={12} sm={6} lg={3} key={index}>
+              <Grid item xs={12} sm={6} lg={4} key={index}>
                 <Card
                   sx={{
-                    height: { xs: '400px', sm: '450px' },
-                    borderRadius: { xs: '12px', sm: '16px' },
+                    height: '100%',
+                    borderRadius: '12px',
                     border: 'none',
                     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.2s ease',
@@ -600,87 +600,7 @@ const Hero = () => {
               </Grid>
             ))}
           </Grid>
-
-          {/* Section des avantages */}
-          <Box sx={{ mt: { xs: 8, sm: 10 }, textAlign: 'center', px: { xs: 1, sm: 0 } }}>
-            <Typography
-              variant="h3"
-              sx={{
-                fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2.25rem' },
-                fontWeight: '600',
-                mb: { xs: 4, sm: 5 },
-                color: '#1e293b'
-              }}
-            >
-              Pourquoi nous choisir ?
-            </Typography>
-            
-            <Grid container spacing={{ xs: 3, sm: 4 }} justifyContent="center">
-              {[
-                {
-                  icon: <Star sx={{ fontSize: { xs: 28, sm: 32 }, color: '#1648a1' }} />,
-                  title: "Excellence",
-                  description: "Service premium avec une attention aux détails"
-                },
-                {
-                  icon: <Speed sx={{ fontSize: { xs: 28, sm: 32 }, color: '#9f4b62' }} />,
-                  title: "Rapidité",
-                  description: "Traitement express de vos dossiers"
-                },
-                {
-                  icon: <Security sx={{ fontSize: { xs: 28, sm: 32 }, color: '#1648a1' }} />,
-                  title: "Sécurité",
-                  description: "Protection de vos données personnelles"
-                },
-                {
-                  icon: <Support sx={{ fontSize: { xs: 28, sm: 32 }, color: '#9f4b62' }} />,
-                  title: "Support 24/7",
-                  description: "Accompagnement à chaque étape"
-                }
-              ].map((advantage, index) => (
-                <Grid item xs={12} sm={6} md={3} key={index}>
-                  <Box
-                    sx={{
-                      p: { xs: 2.5, sm: 3 },
-                      borderRadius: { xs: '12px', sm: '16px' },
-                      backgroundColor: 'white',
-                      boxShadow: '0 2px 15px rgba(0, 0, 0, 0.06)',
-                      transition: 'all 0.2s ease',
-                      '&:hover': {
-                        transform: 'translateY(-4px)',
-                        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)'
-                      }
-                    }}
-                  >
-                    <Box sx={{ mb: { xs: 1.5, sm: 2 } }}>
-                      {advantage.icon}
-                    </Box>
-                    <Typography
-                      variant="h6"
-                      sx={{
-                        fontWeight: '600',
-                        mb: { xs: 0.75, sm: 1 },
-                        color: '#1e293b',
-                        fontSize: { xs: '1.1rem', sm: '1.25rem' }
-                      }}
-                    >
-                      {advantage.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: '#64748b',
-                        lineHeight: 1.5,
-                        fontSize: { xs: '0.8rem', sm: '0.875rem' }
-                      }}
-                    >
-                      {advantage.description}
-                    </Typography>
-                  </Box>
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+          
         </Container>
       </Box>
     </Box>
