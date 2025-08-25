@@ -44,7 +44,7 @@ const Services = () => {
         'Suivi des examens',
         'Renouvellement et duplicata'
       ],
-      price: 'À partir de 150€',
+      price: 'À partir de 98 000 FCFA',
       duration: '2-4 semaines'
     },
     {
@@ -58,7 +58,7 @@ const Services = () => {
         'Duplicata de carte grise',
         'Certificat de cession'
       ],
-      price: 'À partir de 80€',
+      price: 'À partir de 52 000 FCFA',
       duration: '1-2 semaines'
     },
     {
@@ -72,7 +72,7 @@ const Services = () => {
         'Calcul des droits et taxes',
         'Accompagnement douanier'
       ],
-      price: 'À partir de 200€',
+      price: 'À partir de 131 000 FCFA',
       duration: '3-5 jours'
     },
     {
@@ -86,7 +86,7 @@ const Services = () => {
         'Formation continue',
         'Permis à points'
       ],
-      price: 'À partir de 1200€',
+      price: 'À partir de 787 000 FCFA',
       duration: '3-6 mois'
     }
   ];
@@ -140,9 +140,9 @@ const Services = () => {
 
       {/* Services Section */}
       <Container maxWidth="lg" className="services-list">
-        <Grid container spacing={4}>
+        <Grid container spacing={4} justifyContent="center" alignItems="stretch">
           {services.map((service, index) => (
-            <Grid item xs={12} md={6} key={index}>
+            <Grid item xs={12} md={6} lg={5} key={index}>
               <Card className="service-card">
                 <CardContent className="service-content">
                   <Box className="service-icon">
@@ -201,6 +201,7 @@ const Services = () => {
                     variant="contained" 
                     fullWidth
                     size="large"
+                    onClick={() => navigate('/contact')}
                     sx={{ 
                       background: 'linear-gradient(135deg, #1946a3, #a26175)',
                       '&:hover': { 
@@ -231,9 +232,9 @@ const Services = () => {
             Questions Fréquentes
           </Typography>
           
-          <Grid container spacing={3}>
+          <Grid container spacing={3} justifyContent="center">
             {faq.map((item, index) => (
-              <Grid item xs={12} md={6} key={index}>
+              <Grid item xs={12} md={8} lg={6} key={index}>
                 <Accordion>
                   <AccordionSummary expandIcon={<ExpandMore />}>
                     <Typography variant="h6" sx={{ fontWeight: '600' }}>
@@ -282,6 +283,7 @@ const Services = () => {
                 variant="contained" 
                 size="large"
                 className="cta-btn-orange"
+                onClick={() => navigate('/contact')}
               >
                 Demander un devis gratuit
               </Button>
@@ -290,6 +292,7 @@ const Services = () => {
                 variant="outlined" 
                 size="large"
                 className="cta-btn-white"
+                onClick={() => navigate('/contact')}
               >
                 Nous contacter
               </Button>

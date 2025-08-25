@@ -116,22 +116,13 @@ const About = () => {
               </Button>
             </Box>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <Box className="mission-image">
-              <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop"
-                alt="Équipe au travail"
-                className="about-img"
-              />
-            </Box>
-          </Grid>
         </Grid>
       </Container>
 
       {/* Stats Section */}
       <Box className="stats-section">
         <Container maxWidth="lg">
-          <Grid container spacing={4}>
+          <Grid container spacing={4} justifyContent="center" alignItems="stretch">
             {stats.map((stat, index) => (
               <Grid item xs={6} md={3} key={index}>
                 <Card className="stat-card">
@@ -185,7 +176,7 @@ const About = () => {
           <Typography variant="h3" className="section-title text-center">
             Notre Équipe
           </Typography>
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={4} justifyContent="center" alignItems="stretch">
             {team.map((member, index) => (
               <Grid item xs={12} md={4} key={index}>
                 <Card className="team-card">
@@ -234,6 +225,7 @@ const About = () => {
                 variant="contained" 
                 size="large"
                 className="primary-cta-btn"
+                onClick={() => navigate('/contact')}
               >
                 Nous contacter
               </Button>
@@ -241,6 +233,7 @@ const About = () => {
                 variant="outlined" 
                 size="large"
                 className="secondary-cta-btn"
+                onClick={() => navigate('/services')}
               >
                 En savoir plus
               </Button>

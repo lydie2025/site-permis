@@ -135,6 +135,7 @@ const Accueil = () => {
                 <Button 
                   variant="contained" 
                   size="large"
+                  onClick={() => navigate('/services')}
                   sx={{ 
                     backgroundColor: '#ff6b35',
                     '&:hover': { backgroundColor: '#e55a2b' },
@@ -150,6 +151,7 @@ const Accueil = () => {
                 <Button 
                   variant="outlined" 
                   size="large"
+                  onClick={() => navigate('/contact')}
                   sx={{ 
                     borderColor: 'white',
                     color: 'white',

@@ -8,6 +8,7 @@ import Temoignages from '../../components/temoignage/Temoignages';
 import { Box } from '@mui/material';
 import AboutSection from '../../components/about-section/AboutSection';
 import ServicesSection from '../../components/services-section/ServicesSection';
+import ContactSection from '../../components/contact-section/ContactSection';
 
 const Home = () => {
   return (
@@ -18,7 +19,6 @@ const Home = () => {
       <Hero />
       <ServicesSection />
       <AboutSection />
-      <Temoignages />
       <Footer />
     </Box>
   );

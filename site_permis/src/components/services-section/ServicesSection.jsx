@@ -37,7 +37,6 @@ const ServicesSection = () => {
         'Suivi des examens',
         'Renouvellement et duplicata'
       ],
-      price: 'À partir de 150€',
       duration: '2-4 semaines',
       color: '#1648a1',
       highlight: true,
@@ -53,7 +52,6 @@ const ServicesSection = () => {
         'Changement d\'adresse',
         'Duplicata de carte grise'
       ],
-      price: 'À partir de 80€',
       duration: '1-2 semaines',
       color: '#9f4b62',
       highlight: false
@@ -68,7 +66,6 @@ const ServicesSection = () => {
         'Calcul des droits',
         'Suivi des formalités'
       ],
-      price: 'À partir de 200€',
       duration: '3-5 jours',
       color: '#1648a1',
       highlight: false
@@ -83,7 +80,6 @@ const ServicesSection = () => {
         'Assistance téléphonique',
         'Garantie de résultat'
       ],
-      price: 'Inclus dans nos forfaits',
       duration: 'Accompagnement continu',
       color: '#9f4b62',
       highlight: false
@@ -109,8 +105,14 @@ const ServicesSection = () => {
       }} />
 
       <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 2 }}>
-        {/* En-tête de la section */}
-        <Box sx={{ textAlign: 'center', mb: 8 }}>
+        {/* En-tête de la section - PARFAITEMENT CENTRÉ */}
+        <Box sx={{ 
+          textAlign: 'center', 
+          mb: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center'
+        }}>
           <Chip 
             label="NOS SERVICES" 
             sx={{ 
@@ -131,7 +133,8 @@ const ServicesSection = () => {
               mb: 3,
               fontSize: { xs: '2.5rem', md: '3.5rem', lg: '4rem' },
               color: '#1e293b',
-              lineHeight: 1.2
+              lineHeight: 1.2,
+              textAlign: 'center'
             }}
           >
             Solutions Automobiles <br />
@@ -145,8 +148,8 @@ const ServicesSection = () => {
               mb: 4, 
               lineHeight: 1.6,
               maxWidth: '700px',
-              mx: 'auto',
-              fontSize: { xs: '1.1rem', md: '1.25rem' }
+              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              textAlign: 'center'
             }}
           >
             Découvrez notre gamme de services professionnels conçus pour simplifier 
@@ -154,265 +157,215 @@ const ServicesSection = () => {
           </Typography>
         </Box>
 
-        {/* Grille des services */}
-        <Grid container spacing={4}>
-          {services.map((service, index) => (
-            <Grid item xs={12} md={6} lg={3} key={index}>
-              <Card
-                sx={{
-                  height: '100%',
-                  borderRadius: 4,
-                  border: 'none',
-                  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  '&:hover': {
-                    transform: 'translateY(-12px)',
-                    boxShadow: `0 20px 40px ${service.color}20`,
-                    '& .service-icon': {
-                      transform: 'scale(1.1) rotate(5deg)',
-                    }
-                  },
-                  '&::before': {
-                    content: '""',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                    right: 0,
-                    height: '4px',
-                    background: `linear-gradient(90deg, ${service.color}, ${service.color === '#1648a1' ? '#9f4b62' : '#1648a1'})`,
-                    zIndex: 1
-                  }
-                }}
-              >
-                {service.highlight && (
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      top: 16,
-                      right: 16,
-                      zIndex: 2
-                    }}
-                  >
-                    <Chip
-                      label={service.badge}
-                      sx={{
-                        backgroundColor: '#1648a1',
-                        color: 'white',
-                        fontWeight: '600',
-                        fontSize: '0.75rem'
-                      }}
-                    />
-                  </Box>
-                )}
-
-                <CardContent sx={{ p: 4, textAlign: 'center', height: '100%' }}>
-                  {/* Icône du service */}
-                  <Box
-                    className="service-icon"
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      mb: 3,
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    {service.icon}
-                  </Box>
-
-                  {/* Titre du service */}
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      fontWeight: '700',
-                      mb: 2,
-                      color: '#1e293b',
-                      fontSize: { xs: '1.25rem', sm: '1.5rem' }
-                    }}
-                  >
-                    {service.title}
-                  </Typography>
-
-                  {/* Description */}
-                  <Typography
-                    variant="body1"
-                    sx={{
-                      color: '#64748b',
-                      mb: 3,
-                      lineHeight: 1.6,
-                      fontSize: '0.95rem'
-                    }}
-                  >
-                    {service.description}
-                  </Typography>
-
-                  {/* Liste des fonctionnalités */}
-                  <Box sx={{ textAlign: 'left', mb: 3 }}>
-                    {service.features.map((feature, featureIndex) => (
-                      <Box
-                        key={featureIndex}
-                        sx={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          mb: 1.5,
-                          gap: 1
-                        }}
-                      >
-                        <CheckCircle
-                          sx={{
-                            fontSize: 18,
-                            color: '#10b981',
-                            flexShrink: 0
-                          }}
-                        />
-                        <Typography
-                          variant="body2"
-                          sx={{
-                            color: '#475569',
-                            fontSize: '0.875rem',
-                            fontWeight: '500'
-                          }}
-                        >
-                          {feature}
-                        </Typography>
-                      </Box>
-                    ))}
-                  </Box>
-
-                  {/* Informations supplémentaires */}
-                  <Stack direction="row" spacing={2} sx={{ mb: 3, justifyContent: 'center' }}>
-                    <Box sx={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: 1,
-                      p: 1,
-                      backgroundColor: 'rgba(22, 72, 161, 0.1)',
-                      borderRadius: 1
-                    }}>
-                      <Schedule sx={{ fontSize: 16, color: '#1648a1' }} />
-                      <Typography variant="caption" sx={{ color: '#64748b', fontWeight: '500' }}>
-                        {service.duration}
-                      </Typography>
-                    </Box>
-                    <Box sx={{ 
-                      display: 'flex', 
-                      alignItems: 'center', 
-                      gap: 1,
-                      p: 1,
-                      backgroundColor: 'rgba(159, 75, 98, 0.1)',
-                      borderRadius: 1
-                    }}>
-                      <Euro sx={{ fontSize: 16, color: '#9f4b62' }} />
-                      <Typography variant="caption" sx={{ color: '#64748b', fontWeight: '500' }}>
-                        {service.price}
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </CardContent>
-
-                <CardActions sx={{ p: 4, pt: 0 }}>
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    size="large"
-                    sx={{
-                      backgroundColor: service.color,
-                      color: 'white',
-                      '&:hover': {
-                        backgroundColor: service.color === '#1648a1' ? '#9f4b62' : '#1648a1',
-                        transform: 'translateY(-2px)',
-                        boxShadow: `0 8px 25px ${service.color}40`
-                      },
-                      borderRadius: 2,
-                      py: 1.5,
-                      fontWeight: '600',
-                      textTransform: 'none',
-                      transition: 'all 0.3s ease'
-                    }}
-                  >
-                    Commencer maintenant
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* Section des avantages */}
-        <Box sx={{ mt: 12, textAlign: 'center' }}>
-          <Typography
-            variant="h3"
-            sx={{
-              fontSize: { xs: '1.75rem', sm: '2.25rem' },
-              fontWeight: '700',
-              mb: 6,
-              color: '#1e293b'
+        {/* Grille des services - PARFAITEMENT CENTRÉE */}
+        <Box sx={{ 
+          display: 'flex', 
+          justifyContent: 'center',
+          width: '100%'
+        }}>
+          <Grid 
+            container 
+            spacing={4} 
+            sx={{ 
+              maxWidth: '1200px',
+              justifyContent: 'center'
             }}
           >
-            Pourquoi nous choisir ?
-          </Typography>
-          
-          <Grid container spacing={4} justifyContent="center">
-            {[
-              {
-                icon: <Star sx={{ fontSize: 40, color: '#1648a1' }} />,
-                title: "Excellence",
-                description: "Service premium avec une attention aux détails"
-              },
-              {
-                icon: <Schedule sx={{ fontSize: 40, color: '#9f4b62' }} />,
-                title: "Rapidité",
-                description: "Traitement express de vos dossiers"
-              },
-              {
-                icon: <Support sx={{ fontSize: 40, color: '#1648a1' }} />,
-                title: "Support 24/7",
-                description: "Accompagnement à chaque étape"
-              },
-              {
-                icon: <CheckCircle sx={{ fontSize: 40, color: '#9f4b62' }} />,
-                title: "Garantie",
-                description: "Résultats garantis ou remboursé"
-              }
-            ].map((advantage, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
-                <Box
+            {services.map((service, index) => (
+              <Grid 
+                item 
+                xs={12} 
+                sm={6} 
+                md={4} 
+                lg={3} 
+                key={index}
+                sx={{ 
+                  display: 'flex',
+                  justifyContent: 'center'
+                }}
+              >
+                <Card
                   sx={{
-                    p: 3,
-                    borderRadius: 3,
-                    backgroundColor: 'white',
-                    boxShadow: '0 2px 15px rgba(0, 0, 0, 0.05)',
-                    transition: 'all 0.3s ease',
+                    width: '100%',
+                    maxWidth: '350px',
+                    height: '100%',
+                    borderRadius: 4,
+                    border: 'none',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                    position: 'relative',
+                    overflow: 'hidden',
                     '&:hover': {
-                      transform: 'translateY(-5px)',
-                      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)'
+                      transform: 'translateY(-12px)',
+                      boxShadow: `0 20px 40px ${service.color}20`,
+                      '& .service-icon': {
+                        transform: 'scale(1.1) rotate(5deg)',
+                      }
+                    },
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      height: '4px',
+                      background: `linear-gradient(90deg, ${service.color}, ${service.color === '#1648a1' ? '#9f4b62' : '#1648a1'})`,
+                      zIndex: 1
                     }
                   }}
                 >
-                  <Box sx={{ mb: 2 }}>
-                    {advantage.icon}
-                  </Box>
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontWeight: '700',
-                      mb: 1,
-                      color: '#1e293b'
-                    }}
-                  >
-                    {advantage.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: '#64748b',
-                      lineHeight: 1.5
-                    }}
-                  >
-                    {advantage.description}
-                  </Typography>
-                </Box>
+                  {service.highlight && (
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        top: 16,
+                        right: 16,
+                        zIndex: 2
+                      }}
+                    >
+                      <Chip
+                        label={service.badge}
+                        sx={{
+                          backgroundColor: '#1648a1',
+                          color: 'white',
+                          fontWeight: '600',
+                          fontSize: '0.75rem'
+                        }}
+                      />
+                    </Box>
+                  )}
+
+                  <CardContent sx={{ 
+                    p: 4, 
+                    textAlign: 'center', 
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between'
+                  }}>
+                    {/* Icône du service */}
+                    <Box
+                      className="service-icon"
+                      sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        mb: 3,
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      {service.icon}
+                    </Box>
+
+                    {/* Titre du service */}
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontWeight: '700',
+                        mb: 2,
+                        color: '#1e293b',
+                        fontSize: { xs: '1.25rem', sm: '1.5rem' }
+                      }}
+                    >
+                      {service.title}
+                    </Typography>
+
+                    {/* Description */}
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: '#64748b',
+                        mb: 3,
+                        lineHeight: 1.6,
+                        fontSize: '0.95rem'
+                      }}
+                    >
+                      {service.description}
+                    </Typography>
+
+                    {/* Liste des fonctionnalités */}
+                    <Box sx={{ textAlign: 'left', mb: 3 }}>
+                      {service.features.map((feature, featureIndex) => (
+                        <Box
+                          key={featureIndex}
+                          sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            mb: 1.5,
+                            gap: 1
+                          }}
+                        >
+                          <CheckCircle
+                            sx={{
+                              fontSize: 18,
+                              color: '#10b981',
+                              flexShrink: 0
+                            }}
+                          />
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              color: '#475569',
+                              fontSize: '0.875rem',
+                              fontWeight: '500'
+                            }}
+                          >
+                            {feature}
+                          </Typography>
+                        </Box>
+                      ))}
+                    </Box>
+
+                    {/* Informations supplémentaires */}
+                    <Stack direction="row" spacing={2} sx={{ mb: 3, justifyContent: 'center' }}>
+                      <Box sx={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: 1,
+                        p: 1,
+                        backgroundColor: 'rgba(22, 72, 161, 0.1)',
+                        borderRadius: 1
+                      }}>
+                        <Schedule sx={{ fontSize: 16, color: '#1648a1' }} />
+                        <Typography variant="caption" sx={{ color: '#64748b', fontWeight: '500' }}>
+                          {service.duration}
+                        </Typography>
+                      </Box>
+                      <Box sx={{ 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        gap: 1,
+                        p: 1,
+                        backgroundColor: 'rgba(159, 75, 98, 0.1)',
+                        borderRadius: 1
+                      }}>
+                      </Box>
+                    </Stack>
+                  </CardContent>
+
+                  <CardActions sx={{ p: 4, pt: 0 }}>
+                    <Button
+                      variant="contained"
+                      fullWidth
+                      size="large"
+                      sx={{
+                        backgroundColor: service.color,
+                        color: 'white',
+                        '&:hover': {
+                          backgroundColor: service.color === '#1648a1' ? '#9f4b62' : '#1648a1',
+                          transform: 'translateY(-2px)',
+                          boxShadow: `0 8px 25px ${service.color}40`
+                        },
+                        borderRadius: 2,
+                        py: 1.5,
+                        fontWeight: '600',
+                        textTransform: 'none',
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      Commencer maintenant
+                    </Button>
+                  </CardActions>
+                </Card>
               </Grid>
             ))}
           </Grid>
@@ -422,4 +375,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection; 
+export default ServicesSection;

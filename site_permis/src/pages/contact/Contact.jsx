@@ -83,13 +83,13 @@ const Contact = () => {
     {
       icon: <Phone />,
       title: "Téléphone",
-      main: "+33 1 23 45 67 89",
+      main: "694153503 / 694265006",
       subtitle: "Lun-Ven: 9h-18h. Sam: 9h-12h"
     },
     {
       icon: <Email />,
       title: "E-mail",
-      main: "contact@globalcarconsulting.fr",
+      main: "YENDEFREID@ICLOUD.COM",
       subtitle: "Réponse sous 24h"
     },
     {
@@ -286,22 +286,7 @@ const Contact = () => {
           </Grid>
 
           {/* Google Maps Placeholder */}
-          <Grid item xs={12} md={2}>
-            <Box sx={{
-              width: '100%',
-              height: 300,
-              backgroundColor: '#f0f0f0',
-              borderRadius: 2,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              border: '1px solid #ddd'
-            }}>
-              <Typography variant="body2" color="textSecondary">
-                Carte Google Maps
-              </Typography>
-            </Box>
-          </Grid>
+          
 
           {/* Pourquoi nous choisir */}
           <Grid item xs={12} md={3}>
@@ -355,6 +340,7 @@ const Contact = () => {
               <Button 
                 variant="contained" 
                 size="large"
+                onClick={() => window.open('tel:694153503')}
                 sx={{ 
                   backgroundColor: '#a26175',
                   '&:hover': { backgroundColor: '#8a4f63' },
@@ -370,6 +356,7 @@ const Contact = () => {
               <Button 
                 variant="outlined" 
                 size="large"
+                onClick={() => window.open('tel:694153503')}
                 sx={{ 
                   borderColor: '#a26175',
                   color: '#a26175',

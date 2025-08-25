@@ -35,13 +35,17 @@
 
 .hero-subtitle {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   opacity: 0.95;
   font-size: 1.5rem !important;
   line-height: 1.6;
   position: relative;
   z-index: 2;
   font-weight: 400 !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mission Section */
@@ -50,10 +54,18 @@
   margin-bottom: 6rem;
   position: relative;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mission-content {
   padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-title {
@@ -126,6 +138,9 @@
 .stats-section {
   padding: 4rem 0;
   margin-bottom: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .stat-card {
@@ -136,6 +151,11 @@
   text-align: center;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .stat-card::before {
@@ -186,6 +206,10 @@
 .values-container {
   margin-bottom: 6rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .value-card {
@@ -196,6 +220,10 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .value-card::before {
@@ -250,6 +278,9 @@
   margin-bottom: 6rem;
   position: relative;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-section::before {
@@ -272,6 +303,10 @@
   overflow: hidden;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .team-card:hover {
@@ -380,20 +415,20 @@
 }
 
 .primary-cta-btn {
-  background: linear-gradient(135deg, #ffd700, #ffed4e) !important;
-  color: #1946a3 !important;
+  background: linear-gradient(135deg, #9f4b62, #8a3f54) !important;
+  color: white !important;
   font-weight: 700 !important;
   padding: 1rem 2rem !important;
   border-radius: 25px !important;
   font-size: 1.1rem !important;
   text-transform: none !important;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(159, 75, 98, 0.3) !important;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
 .primary-cta-btn:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4) !important;
+  box-shadow: 0 15px 40px rgba(159, 75, 98, 0.4) !important;
 }
 
 .secondary-cta-btn {
@@ -408,8 +443,8 @@
 }
 
 .secondary-cta-btn:hover {
-  border-color: #ffd700 !important;
-  background-color: rgba(255, 215, 0, 0.1) !important;
+  border-color: #9f4b62 !important;
+  background-color: rgba(159, 75, 98, 0.1) !important;
   transform: translateY(-3px) !important;
 }
 

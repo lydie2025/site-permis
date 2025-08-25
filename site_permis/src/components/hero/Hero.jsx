@@ -257,6 +257,7 @@ const Hero = () => {
               <Button
                 variant="contained"
                 size="large"
+                onClick={() => navigate('/services')}
                 sx={{
                   backgroundColor: '#9f4b62',
                   '&:hover': { 
@@ -275,31 +276,6 @@ const Hero = () => {
               >
                 Commencer Maintenant 
                 <ArrowForward sx={{ ml: { xs: 1, sm: 2 }, fontSize: { xs: 18, sm: 20 } }} />
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="large"
-                sx={{
-                  borderColor: 'rgba(255,255,255,0.8)',
-                  borderWidth: 2,
-                  color: 'white',
-                  '&:hover': { 
-                    borderColor: '#1648a1',
-                    backgroundColor: 'rgba(22, 72, 161, 0.2)'
-                  },
-                  px: { xs: 4, sm: 6 },
-                  py: { xs: 1.5, sm: 2 },
-                  borderRadius: { xs: '20px', sm: '25px' },
-                  fontWeight: '600',
-                  fontSize: { xs: '1rem', sm: '1.1rem' },
-                  textTransform: 'none',
-                  minWidth: { xs: '100%', sm: '200px' },
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                <PlayArrow sx={{ mr: { xs: 1, sm: 2 }, fontSize: { xs: 18, sm: 20 } }} />
-                Voir la vidéo
               </Button>
             </Box>
 
@@ -432,176 +408,6 @@ const Hero = () => {
         >
           <ChevronRight sx={{ fontSize: { xs: 20, sm: 24 } }} />
         </IconButton>
-      </Box>
-
-      {/* Section Services */}
-      <Box sx={{ 
-        py: { xs: 6, sm: 8 },
-        backgroundColor: '#f8fafc'
-      }}>
-        <Container maxWidth="lg">
-          {/* En-tête de la section */}
-          <Box sx={{ textAlign: 'center', mb: { xs: 6, sm: 8 }, px: { xs: 1, sm: 0 } }}>
-            <Chip
-              label="HISTORIQUE"
-              sx={{
-                backgroundColor: '#1648a1',
-                color: 'white',
-                fontWeight: '600',
-                fontSize: { xs: '0.75rem', sm: '0.875rem' },
-                px: { xs: 2, sm: 3 },
-                py: { xs: 0.75, sm: 1 },
-                mb: { xs: 2, sm: 3 },
-                borderRadius: { xs: '12px', sm: '15px' }
-              }}
-            />
-            <Typography
-              variant="h2"
-              sx={{
-                fontSize: { xs: '1.75rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
-                fontWeight: '700',
-                mb: { xs: 1.5, sm: 2 },
-                color: '#1e293b',
-                px: { xs: 1, sm: 0 }
-              }}
-            >
-              Solutions Automobiles Complètes
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{
-                fontSize: { xs: '1rem', sm: '1.1rem' },
-                color: '#64748b',
-                maxWidth: { xs: '100%', sm: '600px' },
-                mx: 'auto',
-                lineHeight: 1.6,
-                px: { xs: 1, sm: 0 }
-              }}
-            >
-              Découvrez notre gamme de services professionnels conçus pour simplifier 
-              vos démarches automobiles
-            </Typography>
-          </Box>
-
-          {/* Grille des services */}
-          <Grid container spacing={{ xs: 3, sm: 4 }} justifyContent="center">
-            {services.map((service, index) => (
-              <Grid item xs={12} sm={6} lg={4} key={index}>
-                <Card
-                  sx={{
-                    height: '100%',
-                    borderRadius: '12px',
-                    border: 'none',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
-                    transition: 'all 0.2s ease',
-                    '&:hover': {
-                      transform: 'translateY(-8px)',
-                      boxShadow: '0 12px 40px rgba(0, 0, 0, 0.15)'
-                    }
-                  }}
-                >
-                  <CardContent sx={{ 
-                    p: { xs: 2, sm: 3 }, 
-                    textAlign: 'center', 
-                    height: '100%', 
-                    display: 'flex', 
-                    flexDirection: 'column', 
-                    justifyContent: 'space-between' 
-                  }}>
-                    {/* Icône du service */}
-                    <Box sx={{ mb: { xs: 1.5, sm: 2 } }}>
-                      {service.icon}
-                    </Box>
-
-                    {/* Titre du service */}
-                    <Typography
-                      variant="h5"
-                      sx={{
-                        fontWeight: '600',
-                        mb: { xs: 1.5, sm: 2 },
-                        color: '#1e293b',
-                        fontSize: { xs: '1.1rem', sm: '1.25rem' }
-                      }}
-                    >
-                      {service.title}
-                    </Typography>
-
-                    {/* Description */}
-                    <Typography
-                      variant="body1"
-                      sx={{
-                        color: '#64748b',
-                        mb: 3,
-                        lineHeight: 1.5,
-                        fontSize: '0.9rem'
-                      }}
-                    >
-                      {service.description}
-                    </Typography>
-
-                    {/* Liste des fonctionnalités */}
-                    <Box sx={{ textAlign: 'left', mb: 3 }}>
-                      {service.features.map((feature, featureIndex) => (
-                        <Box
-                          key={featureIndex}
-                          sx={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            mb: 1,
-                            gap: 1
-                          }}
-                        >
-                          <CheckCircle
-                            sx={{
-                              fontSize: 16,
-                              color: '#10b981',
-                              flexShrink: 0
-                            }}
-                          />
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              color: '#475569',
-                              fontSize: '0.8rem',
-                              fontWeight: '500'
-                            }}
-                          >
-                            {feature}
-                          </Typography>
-                        </Box>
-                      ))}
-                    </Box>
-
-                    {/* Bouton d'action */}
-                    <Button
-                      variant="outlined"
-                      size="small"
-                      sx={{
-                        borderColor: service.color,
-                        color: service.color,
-                        borderWidth: 1.5,
-                        borderRadius: '15px',
-                        px: 2,
-                        py: 1,
-                        fontWeight: '500',
-                        textTransform: 'none',
-                        transition: 'all 0.2s ease',
-                        '&:hover': {
-                          backgroundColor: service.color,
-                          color: 'white',
-                          borderColor: service.color
-                        }
-                      }}
-                    >
-                      En savoir plus
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-          
-        </Container>
       </Box>
     </Box>
   );

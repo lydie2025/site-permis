@@ -100,29 +100,6 @@ const Header = () => {
               </Typography>
             </Box>
           </Stack>
-
-          {/* Bouton d'action */}
-          <Button 
-            variant="contained" 
-            sx={{ 
-              background: 'linear-gradient(135deg, #9f4b62 0%, #8a3f54 100%)',
-              '&:hover': { 
-                background: 'linear-gradient(135deg, #8a3f54 0%, #9f4b62 100%)',
-                transform: 'translateY(-2px)',
-                boxShadow: '0 6px 20px rgba(159, 75, 98, 0.4)'
-              },
-              px: 3,
-              py: 1.5,
-              borderRadius: '12px',
-              fontWeight: '600',
-              textTransform: 'none',
-              boxShadow: '0 4px 15px rgba(159, 75, 98, 0.3)',
-              transition: 'all 0.2s ease',
-              display: { xs: 'none', sm: 'block' }
-            }}
-          >
-            Devis Gratuit
-          </Button>
         </Box>
       </Container>
     </Box>

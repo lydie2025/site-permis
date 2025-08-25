@@ -29,7 +29,7 @@ const Navbar = () => {
   const location = useLocation();
 
   const menuItems = [
-    { text: 'Accueil', path: '/accueil' },
+    { text: 'Accueil', path: '/' },
     { text: 'Services', path: '/services' },
     { text: 'À propos', path: '/about' },
     { text: 'Contact', path: '/contact' }
@@ -141,19 +141,19 @@ const Navbar = () => {
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 1.5, gap: 1 }}>
           <Phone sx={{ fontSize: 18, color: '#1648a1' }} />
           <Typography variant="body2" sx={{ color: '#475569' }}>
-            +33 1 23 45 67 89
+            694153503 / 694265006
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 1.5, gap: 1 }}>
           <Email sx={{ fontSize: 18, color: '#1648a1' }} />
           <Typography variant="body2" sx={{ color: '#475569' }}>
-            contact@globalcar.fr
+            YENDEFREID@ICLOUD.COM
           </Typography>
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <LocationOn sx={{ fontSize: 18, color: '#1648a1' }} />
           <Typography variant="body2" sx={{ color: '#475569' }}>
-            Paris, France
+            Yaounde, Cameroun
           </Typography>
         </Box>
       </Box>
@@ -267,6 +267,7 @@ const Navbar = () => {
               }}>
                 <Button 
                   variant="outlined"
+                  onClick={() => navigate('/contact')}
                   sx={{ 
                     borderColor: '#1648a1',
                     color: '#1648a1',
@@ -274,7 +275,10 @@ const Navbar = () => {
                     '&:hover': { 
                       borderColor: '#9f4b62',
                       backgroundColor: 'rgba(159, 75, 98, 0.05)',
-                      transform: 'translateY(-2px)'
+                      borderRadius: '12px',
+                      fontWeight: '600',
+                      textTransform: 'none',
+                      transition: 'all 0.2s ease'
                     },
                     px: 3,
                     py: 1.5,
@@ -286,26 +290,7 @@ const Navbar = () => {
                 >
                   Nous contacter
                 </Button>
-                <Button 
-                  variant="contained" 
-                  sx={{ 
-                    background: 'linear-gradient(135deg, #9f4b62 0%, #8a3f54 100%)',
-                    '&:hover': { 
-                      background: 'linear-gradient(135deg, #8a3f54 0%, #9f4b62 100%)',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 8px 25px rgba(159, 75, 98, 0.4)'
-                    },
-                    px: 3,
-                    py: 1.5,
-                    borderRadius: '12px',
-                    fontWeight: '600',
-                    textTransform: 'none',
-                    boxShadow: '0 4px 20px rgba(159, 75, 98, 0.3)',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  Réserver
-                </Button>
+
               </Box>
             </Toolbar>
           </Container>
@@ -335,7 +320,7 @@ const Navbar = () => {
                 alignItems: 'center', 
                 cursor: 'pointer',
                 mr: { xs: 2, md: 4 }
-              }} onClick={() => navigate('/accueil')}>
+              }} onClick={() => navigate('/')}>
                 <Box sx={{ 
                   width: 40, 
                   height: 40, 
@@ -456,6 +441,7 @@ const Navbar = () => {
                 <Button 
                   variant="outlined"
                   size="small"
+                  onClick={() => navigate('/contact')}
                   sx={{ 
                     borderColor: '#1648a1',
                     color: '#1648a1',
@@ -475,28 +461,6 @@ const Navbar = () => {
                   }}
                 >
                   Nous contacter
-                </Button>
-                <Button 
-                  variant="contained" 
-                  size="small"
-                  sx={{ 
-                    background: 'linear-gradient(135deg, #9f4b62 0%, #8a3f54 100%)',
-                    '&:hover': { 
-                      background: 'linear-gradient(135deg, #8a3f54 0%, #9f4b62 100%)',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 6px 20px rgba(159, 75, 98, 0.4)'
-                    },
-                    px: 2.5,
-                    py: 1,
-                    borderRadius: '10px',
-                    fontWeight: '600',
-                    textTransform: 'none',
-                    fontSize: '0.875rem',
-                    boxShadow: '0 3px 15px rgba(159, 75, 98, 0.3)',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  Réserver
                 </Button>
               </Box>
             </Toolbar>

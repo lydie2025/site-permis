@@ -95,7 +95,7 @@ const Topbar = () => {
                 fontWeight: '500',
                 color: '#e2e8f0'
               }}>
-                +33 1 23 45 67 89
+                694153503 / 694265006
               </Typography>
             </Box>
             <Box sx={{ 
@@ -120,7 +120,7 @@ const Topbar = () => {
                 fontWeight: '500',
                 color: '#e2e8f0'
               }}>
-                contact@globalcarconsulting.fr
+                YENDEFREID@ICLOUD.COM
               </Typography>
             </Box>
             <Box sx={{ 
@@ -145,7 +145,7 @@ const Topbar = () => {
                 fontWeight: '500',
                 color: '#e2e8f0'
               }}>
-                Paris, France
+                Yaounde, Cameroun
               </Typography>
             </Box>
           </Stack>

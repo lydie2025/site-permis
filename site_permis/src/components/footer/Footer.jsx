@@ -42,7 +42,7 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { name: 'Accueil', href: '/accueil' },
+    { name: 'Accueil', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Contact', href: '/contact' },
     { name: 'À propos', href: '/accueil' },
@@ -62,11 +62,24 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
               <Box sx={{
-                width: 50, height: 50, backgroundColor: '#a26175',
-                borderRadius: '50%', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', fontWeight: 'bold'
+                width: 50, height: 50,
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                overflow: 'hidden',
+                border: '2px solid rgba(255,255,255,0.2)'
               }}>
-                GC
+                <img 
+                  src={logo} 
+                  alt="Global Car Consulting Logo" 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    borderRadius: '50%'
+                  }} 
+                />
               </Box>
               <Box>
                 <Typography variant="h5" sx={{ fontWeight: 'bold' }}>GLOBAL CAR</Typography>
@@ -115,9 +128,9 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 3, fontWeight: '600' }}>Contact</Typography>
             <Stack spacing={2}>
-              {iconTextRow(Phone, '+33 1 23 45 67 89')}
-              {iconTextRow(Email, 'contact@globalcarconsulting.fr')}
-              {iconTextRow(LocationOn, <>123 Avenue des Champs-Élysées<br />75008 Paris, France</>)}
+              {iconTextRow(Phone, '694153503 / 694265006')}
+              {iconTextRow(Email, 'YENDEFREID@ICLOUD.COM')}
+              {iconTextRow(LocationOn, <>Yaounde, Cameroun</>)}
             </Stack>
 
             <Box sx={{ mt: 3, p: 2, backgroundColor: 'rgba(162, 97, 117, 0.1)', borderRadius: 2 }}>

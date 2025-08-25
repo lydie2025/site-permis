@@ -9,7 +9,7 @@
   color: white;
   padding: 6rem 0;
   text-align: center;
-  position: relative;
+  
   overflow: hidden;
 }
 
@@ -41,11 +41,29 @@
   font-size: 1.25rem;
   position: relative;
   z-index: 2;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Services list */
 .services-list {
   padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-list .MuiContainer-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-list .MuiGrid-container {
+  justify-content: center;
+  align-items: stretch;
 }
 
 .service-card {
@@ -56,6 +74,9 @@
   border: 1px solid rgba(25, 70, 163, 0.1);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service-card::before {
@@ -82,6 +103,11 @@
 .service-content {
   text-align: center;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .service-icon {
@@ -108,6 +134,10 @@
 .service-tags {
   justify-content: center;
   margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .service-tags .MuiChip-root {
@@ -132,6 +162,8 @@
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.75rem;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .feature-item .MuiSvgIcon-root {
@@ -144,6 +176,9 @@
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   padding: 6rem 0;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .faq-section::before {
@@ -221,6 +256,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cta-section::before {
@@ -252,14 +290,14 @@
 }
 
 .cta-btn-orange {
-  background: linear-gradient(135deg, #ffd700, #ffed4e) !important;
-  color: #1946a3 !important;
+  background: linear-gradient(135deg, #9f4b62, #8a3f54) !important;
+  color: white !important;
   font-weight: 700 !important;
   padding: 1rem 2rem !important;
   border-radius: 25px !important;
   font-size: 1.1rem !important;
   text-transform: none !important;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(159, 75, 98, 0.3) !important;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   position: relative;
   z-index: 2;
@@ -267,7 +305,7 @@
 
 .cta-btn-orange:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4) !important;
+  box-shadow: 0 15px 40px rgba(159, 75, 98, 0.4) !important;
 }
 
 .cta-btn-white {
@@ -284,8 +322,8 @@
 }
 
 .cta-btn-white:hover {
-  border-color: #ffd700 !important;
-  background-color: rgba(255, 215, 0, 0.1) !important;
+  border-color: #9f4b62 !important;
+  background-color: rgba(159, 75, 98, 0.1) !important;
   transform: translateY(-3px) !important;
 }
 
@@ -301,6 +339,21 @@
   
   .service-content {
     padding: 1.5rem;
+  }
+  
+  .services-list .MuiGrid-container {
+    justify-content: center;
+  }
+  
+  .faq-section .MuiGrid-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .service-card {
+    margin: 0 auto;
+    max-width: 500px;
   }
 }
 
