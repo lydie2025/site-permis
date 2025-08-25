@@ -27,12 +27,14 @@ import {
   Speed,
   Verified 
 } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 import Topbar from '../../components/topbar/Topbar';
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 
 const Accueil = () => {
+  const navigate = useNavigate();
   const stats = [
     { number: '5000+', label: 'Clients satisfaits', icon: <People /> },
     { number: '15+', label: 'Années d\'expérience', icon: <Star /> },
@@ -52,7 +54,7 @@ const Accueil = () => {
       description: 'Nous optimisons chaque processus pour vous faire gagner du temps et de l\'argent.'
     },
     {
-      icon: <Trust sx={{ fontSize: 40, color: '#ff6b35' }} />,
+             icon: <Verified sx={{ fontSize: 40, color: '#ff6b35' }} />,
       title: 'Expertise',
       description: 'Notre équipe d\'experts vous accompagne avec professionnalisme et compétence.'
     }
@@ -94,7 +96,6 @@ const Accueil = () => {
         overflow: 'hidden'
       }}>
         {/* Background pattern */}
-       =
 
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
           <Grid container spacing={6} alignItems="center">

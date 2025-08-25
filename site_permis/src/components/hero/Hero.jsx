@@ -12,9 +12,11 @@ import {
   Support,
   Verified
 } from "@mui/icons-material";
+import { useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo.jpg";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [

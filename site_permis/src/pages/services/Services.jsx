@@ -25,6 +25,7 @@ import {
   Euro,
   Security
 } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 import Topbar from '../../components/topbar/Topbar';
 import Header from '../../components/header/Header';
 import Navbar from '../../components/navbar/Navbar';
@@ -32,6 +33,7 @@ import Footer from '../../components/footer/Footer';
 import './services.css';
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <DirectionsCar />,

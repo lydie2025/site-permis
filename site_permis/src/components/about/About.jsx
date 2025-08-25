@@ -19,6 +19,7 @@ import {
   CheckCircle,
   Star
 } from "@mui/icons-material";
+import { useNavigate } from 'react-router-dom';
 import Topbar from "../topbar/Topbar";
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
@@ -26,6 +27,7 @@ import Footer from "../footer/Footer";
 import "./about.css";
 
 const About = () => {
+  const navigate = useNavigate();
   const stats = [
     { number: "500+", label: "Clients satisfaits", icon: <Star /> },
     { number: "10+", label: "Années d'expérience", icon: <TrendingUp /> },
@@ -111,6 +113,7 @@ const About = () => {
                 size="large"
                 className="cta-button"
                 startIcon={<Business />}
+                onClick={() => navigate('/services')}
               >
                 Découvrir nos services
               </Button>

@@ -13,8 +13,10 @@ import {
   WhatsApp,
   ArrowRight
 } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ 
       background: 'linear-gradient(135deg, #1648a1 0%, #1e5bb8 50%, #9f4b62 100%)',
@@ -149,6 +151,7 @@ const CTASection = () => {
                   fullWidth
                   size="large"
                   startIcon={<Phone />}
+                  onClick={() => window.open('tel:694153503')}
                   sx={{ 
                     backgroundColor: '#9f4b62',
                     '&:hover': { backgroundColor: '#8a3f54' },

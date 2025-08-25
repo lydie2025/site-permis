@@ -24,8 +24,10 @@ import {
   ViewModule,
   Star
 } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: <Description sx={{ fontSize: 60, color: '#1648a1' }} />,
@@ -347,6 +349,7 @@ const ServicesSection = () => {
                       variant="contained"
                       fullWidth
                       size="large"
+                      onClick={() => navigate('/contact')}
                       sx={{
                         backgroundColor: service.color,
                         color: 'white',
