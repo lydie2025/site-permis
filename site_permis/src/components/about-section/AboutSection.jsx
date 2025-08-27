@@ -383,7 +383,7 @@ const AboutSection = () => {
                 fontSize: '1rem'
               }}
             >
-              Nous contacter
+              Contacter Nous
             </Button>
           </Box>
         </Box>
