@@ -42,8 +42,8 @@ const ContactSection = () => {
     {
       icon: <LocationOn sx={{ fontSize: 40, color: '#1648a1' }} />,
       title: 'Adresse',
-      info: 'Paris, France',
-      description: 'Bureau principal au cœur de Paris'
+      info: 'Yaoundé, Cameroun',
+              description: 'Bureau principal au cœur de Yaoundé'
     },
     {
       icon: <Schedule sx={{ fontSize: 40, color: '#9f4b62' }} />,

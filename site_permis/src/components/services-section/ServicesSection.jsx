@@ -373,6 +373,41 @@ const ServicesSection = () => {
             ))}
           </Grid>
         </Box>
+
+        {/* Bouton "Voir tous les services" - PARFAITEMENT CENTRÉ */}
+        <Box sx={{ 
+          textAlign: 'center', 
+          mt: 8,
+          display: 'flex',
+          justifyContent: 'center'
+        }}>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={() => navigate('/services')}
+            sx={{
+              borderColor: '#1648a1',
+              color: '#1648a1',
+              borderWidth: '2px',
+              px: 6,
+              py: 2,
+              fontSize: '1.1rem',
+              fontWeight: '600',
+              textTransform: 'none',
+              borderRadius: 3,
+              '&:hover': {
+                borderColor: '#9f4b62',
+                color: '#9f4b62',
+                backgroundColor: 'rgba(159, 75, 98, 0.05)',
+                transform: 'translateY(-2px)',
+                boxShadow: '0 8px 25px rgba(159, 75, 98, 0.2)'
+              },
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+            }}
+          >
+            Voir tous les services
+          </Button>
+        </Box>
       </Container>
     </Box>
   );

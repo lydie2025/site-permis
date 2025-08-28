@@ -114,9 +114,8 @@ const Services = () => {
 
   return (
     <Box className="services-page">
-      <Topbar />
-      <Header />
       <Navbar />
+      <Header />
       
       {/* Hero Section */}
       <Box className="hero-section">

@@ -76,9 +76,8 @@ const About = () => {
 
   return (
     <Box className="about-page">
-      <Topbar />
-      <Header />
       <Navbar />
+      <Header />
 
       {/* Hero Section */}
       <Box className="about-hero">
@@ -98,7 +97,7 @@ const About = () => {
       <Container maxWidth="lg" className="mission-container">
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} md={6}>
-            <Box className="mission-content">
+            <Box className="mission-content"><br></br>
               <Typography variant="h3" className="section-title">
                 Notre Mission
               </Typography>

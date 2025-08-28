@@ -38,9 +38,13 @@ const Navbar = () => {
   // Détecter le scroll pour changer le style
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
+      const isScrolled = window.scrollY > 100; // Augmenté le seuil
       setScrolled(isScrolled);
     };
+
+    // Vérifier la position initiale au chargement de la page
+    const initialScroll = window.scrollY > 100;
+    setScrolled(initialScroll);
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -242,22 +246,35 @@ const Navbar = () => {
               </Box>
 
               {/* Bouton menu mobile */}
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ 
-                  mr: 2, 
-                  display: { md: 'none' },
-                  backgroundColor: 'rgba(22, 72, 161, 0.1)',
-                  '&:hover': {
-                    backgroundColor: 'rgba(22, 72, 161, 0.2)'
-                  }
-                }}
-              >
-                <Menu />
-              </IconButton>
+              <Box sx={{ 
+                display: { xs: 'flex', md: 'none' },
+                mr: 2,
+                alignItems: 'center',
+                gap: 1,
+                backgroundColor: 'rgba(22, 72, 161, 0.1)',
+                borderRadius: '8px',
+                px: 2,
+                py: 1,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  backgroundColor: 'rgba(22, 72, 161, 0.2)'
+                }
+              }} onClick={handleDrawerToggle}>
+                <Menu sx={{ color: '#1648a1', fontSize: 24 }} />
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: '#1648a1',
+                    fontWeight: '600',
+                    fontSize: '0.9rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}
+                >
+                  Menu
+                </Typography>
+              </Box>
 
               {/* Boutons d'action */}
               <Box sx={{ 
@@ -297,8 +314,8 @@ const Navbar = () => {
         </AppBar>
       )}
 
-      {/* Navbar fixe compacte lors du scroll */}
-      {scrolled && (
+      {/* Navbar fixe compacte lors du scroll OU sur les autres pages */}
+      {(scrolled || location.pathname !== '/') && (
         <AppBar 
           position="fixed" 
           sx={{ 
@@ -415,22 +432,35 @@ const Navbar = () => {
               </Box>
 
               {/* Bouton menu mobile */}
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ 
-                  mr: 2, 
-                  display: { md: 'none' },
-                  backgroundColor: 'rgba(22, 72, 161, 0.1)',
-                  '&:hover': {
-                    backgroundColor: 'rgba(22, 72, 161, 0.2)'
-                  }
-                }}
-              >
-                <Menu />
-              </IconButton>
+              <Box sx={{ 
+                display: { xs: 'flex', md: 'none' },
+                mr: 2,
+                alignItems: 'center',
+                gap: 1,
+                backgroundColor: 'rgba(22, 72, 161, 0.1)',
+                borderRadius: '8px',
+                px: 2,
+                py: 1,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  backgroundColor: 'rgba(22, 72, 161, 0.2)'
+                }
+              }} onClick={handleDrawerToggle}>
+                <Menu sx={{ color: '#1648a1', fontSize: 22 }} />
+                <Typography 
+                  variant="body2" 
+                  sx={{ 
+                    color: '#1648a1',
+                    fontWeight: '600',
+                    fontSize: '0.85rem',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}
+                >
+                  Menu
+                </Typography>
+              </Box>
 
               {/* Boutons d'action */}
               <Box sx={{ 

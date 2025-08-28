@@ -1,17 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Box, IconButton, Typography, Button, Container, Card, CardContent, Grid, Chip } from "@mui/material";
-import { 
-  ArrowForward, 
-  PlayArrow, 
-  ChevronLeft, 
-  ChevronRight,
-  CheckCircle,
-  Star,
-  Security,
-  Speed,
-  Support,
-  Verified
-} from "@mui/icons-material";
+import { Box, IconButton, Typography, Button, Container } from "@mui/material";
+import { ArrowForward, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
 import logo from "../../assets/logo.jpg";
 
@@ -21,65 +10,34 @@ const Hero = () => {
   
   const images = [
     {
-      src: "/src/assets/HeroImage/permis-de-conduire.jpg",
+      src: "/HeroImage/permis-de-conduire.jpg",
       title: "Permis de Conduire",
       subtitle: "Votre liberté commence ici",
       description: "Gestion complète de votre dossier permis avec accompagnement personnalisé"
     },
     {
-      src: "/src/assets/HeroImage/carte-grise.jpg",
+      src: "/HeroImage/carte-grise.jpg",
       title: "Carte Grise",
       subtitle: "Immatriculation simplifiée",
       description: "Démarches complètes pour immatriculation et gestion de votre carte grise"
     },
     {
-      src: "/src/assets/HeroImage/dedouanement.jpg",
+      src: "/HeroImage/dedouanement.jpg",
       title: "Dédouanement",
       subtitle: "Import/Export facilité",
       description: "Accompagnement complet pour l'import/export de vos véhicules"
     },
     {
-      src: "/src/assets/HeroImage/plaque-immatrication.jpg",
+      src: "/HeroImage/plaque-immatrication.jpg",
       title: "Plaques d'Immatriculation",
       subtitle: "Fabrication sur mesure",
       description: "Fabrication et pose de plaques conformes aux normes"
     },
     {
-      src: "/src/assets/HeroImage/port-dedouanement.jpg",
+      src: "/HeroImage/port-dedouanement.jpg",
       title: "Services Complets",
       subtitle: "Accompagnement personnalisé",
       description: "Solutions automobiles complètes avec expertise professionnelle"
-    }
-  ];
-
-  const services = [
-    {
-      icon: <Verified sx={{ fontSize: 32, color: '#1648a1' }} />,
-      title: "Permis de Conduire",
-      description: "Gestion complète de votre dossier avec suivi personnalisé",
-      features: ["Accompagnement 24/7", "Suivi en temps réel", "Garantie de réussite"],
-      color: "#1648a1"
-    },
-    {
-      icon: <Security sx={{ fontSize: 32, color: '#9f4b62' }} />,
-      title: "Carte Grise",
-      description: "Immatriculation simplifiée et rapide",
-      features: ["Démarches en ligne", "Traitement express", "Support juridique"],
-      color: "#9f4b62"
-    },
-    {
-      icon: <Speed sx={{ fontSize: 32, color: '#1648a1' }} />,
-      title: "Dédouanement",
-      description: "Import/Export facilité et sécurisé",
-      features: ["Procédures simplifiées", "Expertise douanière", "Gain de temps"],
-      color: "#1648a1"
-    },
-    {
-      icon: <Support sx={{ fontSize: 32, color: '#9f4b62' }} />,
-      title: "Plaques d'Immatriculation",
-      description: "Fabrication sur mesure et pose professionnelle",
-      features: ["Conformité garantie", "Installation rapide", "Matériaux premium"],
-      color: "#9f4b62"
     }
   ];
 
@@ -107,10 +65,10 @@ const Hero = () => {
       {/* Section Hero */}
       <Box sx={{ 
         position: 'relative',
-        height: { xs: '120vh', sm: '110vh', md: '100vh' }, // Hauteur augmentée sur mobile
+        height: { xs: '90vh', sm: '85vh', md: '80vh' },
         width: '100%',
-        paddingTop: '0', // Pas besoin de padding car le spacer de la navbar compense
-        overflow: 'hidden' // Empêcher les débordements
+        paddingTop: '0',
+        overflow: 'hidden'
       }}>
         {/* Slides */}
         {images.map((image, index) => (
@@ -131,7 +89,7 @@ const Hero = () => {
           />
         ))}
 
-        {/* Overlay simple */}
+        {/* Overlay */}
         <Box sx={{
           position: 'absolute',
           top: 0,
@@ -154,17 +112,17 @@ const Hero = () => {
             color: 'white',
             px: { xs: 1, sm: 2 },
             pt: { xs: 1, sm: 2 },
-            pb: { xs: 8, sm: 6 }, // Espace en bas pour les contrôles
-            gap: { xs: 2, sm: 3 } // Espacement uniforme entre les éléments
+            pb: { xs: 8, sm: 6 },
+            gap: { xs: 2, sm: 3 }
           }}>
-            {/* Badge simple */}
+            {/* Badge */}
             <Box sx={{
               backgroundColor: 'rgba(255,255,255,0.15)',
               border: '1px solid rgba(255,255,255,0.3)',
               borderRadius: { xs: '15px', sm: '20px' },
               px: { xs: 2, sm: 4 },
               py: { xs: 1.5, sm: 2 },
-              mb: { xs: 1, sm: 2 }, // Réduit la marge
+              mb: { xs: 1, sm: 2 },
               display: 'flex',
               alignItems: 'center',
               gap: { xs: 1, sm: 2 }
@@ -206,7 +164,7 @@ const Hero = () => {
               sx={{
                 fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3.5rem', lg: '4.5rem', xl: '5rem' },
                 fontWeight: '800',
-                mb: { xs: 1, sm: 2 }, // Réduit la marge
+                mb: { xs: 1, sm: 2 },
                 lineHeight: 1.1,
                 textShadow: '0 4px 20px rgba(0,0,0,0.5)',
                 px: { xs: 1, sm: 0 }
@@ -220,7 +178,7 @@ const Hero = () => {
               variant="h2"
               sx={{
                 fontSize: { xs: '1rem', sm: '1.25rem', md: '1.75rem', lg: '2rem' },
-                mb: { xs: 1, sm: 2 }, // Réduit la marge
+                mb: { xs: 1, sm: 2 },
                 opacity: 0.95,
                 maxWidth: { xs: '100%', sm: '600px' },
                 fontWeight: '400',
@@ -236,7 +194,7 @@ const Hero = () => {
               variant="h6"
               sx={{
                 fontSize: { xs: '0.875rem', sm: '1rem', md: '1.1rem', lg: '1.25rem' },
-                mb: { xs: 2, sm: 3 }, // Réduit la marge
+                mb: { xs: 2, sm: 3 },
                 opacity: 0.9,
                 maxWidth: { xs: '100%', sm: '500px' },
                 lineHeight: 1.5,
@@ -247,12 +205,12 @@ const Hero = () => {
               {images[currentSlide].description}
             </Typography>
 
-            {/* Boutons d'action */}
+            {/* Bouton d'action */}
             <Box sx={{
               display: 'flex',
               flexDirection: { xs: 'column', sm: 'row' },
               gap: { xs: 2, sm: 3 },
-              mb: { xs: 2, sm: 4 }, // Réduit la marge
+              mb: { xs: 2, sm: 4 },
               width: { xs: '100%', sm: 'auto' },
               px: { xs: 1, sm: 0 }
             }}>
@@ -285,7 +243,7 @@ const Hero = () => {
             <Box sx={{
               display: 'grid',
               gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(4, 1fr)' },
-              gap: { xs: 1.5, sm: 2 }, // Réduit l'espacement
+              gap: { xs: 1.5, sm: 2 },
               maxWidth: { xs: '100%', sm: '600px' },
               width: '100%',
               px: { xs: 1, sm: 0 }
@@ -298,7 +256,7 @@ const Hero = () => {
               ].map((stat, index) => (
                 <Box key={index} sx={{ 
                   textAlign: 'center',
-                  p: { xs: 1, sm: 1.5 }, // Réduit le padding
+                  p: { xs: 1, sm: 1.5 },
                   borderRadius: { xs: '10px', sm: '12px' },
                   backgroundColor: 'rgba(255,255,255,0.1)',
                   border: '1px solid rgba(255,255,255,0.2)',
@@ -311,9 +269,9 @@ const Hero = () => {
                   <Typography
                     variant="h4"
                     sx={{
-                      fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' }, // Réduit la taille
+                      fontSize: { xs: '1.1rem', sm: '1.25rem', md: '1.5rem' },
                       fontWeight: '700',
-                      mb: { xs: 0.25, sm: 0.5 }, // Réduit la marge
+                      mb: { xs: 0.25, sm: 0.5 },
                       color: '#1648a1'
                     }}
                   >
@@ -322,7 +280,7 @@ const Hero = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      fontSize: { xs: '0.7rem', sm: '0.75rem' }, // Réduit la taille
+                      fontSize: { xs: '0.7rem', sm: '0.75rem' },
                       opacity: 0.9,
                       fontWeight: '500'
                     }}
@@ -338,7 +296,7 @@ const Hero = () => {
         {/* Contrôles du carousel */}
         <Box sx={{
           position: 'absolute',
-          bottom: { xs: '1.5rem', sm: '2rem', md: '3rem' }, // Ajusté pour la nouvelle hauteur
+          bottom: { xs: '2rem', sm: '2.5rem', md: '3rem' },
           left: '50%',
           transform: 'translateX(-50%)',
           zIndex: 4,
@@ -369,46 +327,66 @@ const Hero = () => {
           onClick={prevSlide}
           sx={{
             position: 'absolute',
-            left: { xs: '1rem', sm: '2rem' },
+            left: { xs: '1rem', sm: '2rem', md: '3rem' },
             top: '50%',
             transform: 'translateY(-50%)',
             zIndex: 4,
-            backgroundColor: 'rgba(255,255,255,0.15)',
+            backgroundColor: 'rgba(255,255,255,0.2)',
             color: 'white',
-            border: '1px solid rgba(255,255,255,0.3)',
+            border: '2px solid rgba(255,255,255,0.4)',
+            backdropFilter: 'blur(10px)',
             '&:hover': {
-              backgroundColor: 'rgba(255,255,255,0.25)'
+              backgroundColor: 'rgba(255,255,255,0.3)',
+              borderColor: 'rgba(255,255,255,0.6)',
+              transform: 'translateY(-50%) scale(1.1)',
+              boxShadow: '0 8px 25px rgba(0,0,0,0.3)'
             },
             display: { xs: 'flex', md: 'flex' },
-            width: { xs: 40, sm: 48 },
-            height: { xs: 40, sm: 48 },
-            transition: 'all 0.2s ease'
+            width: { xs: 48, sm: 56, md: 64 },
+            height: { xs: 48, sm: 56, md: 64 },
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            '&:active': {
+              transform: 'translateY(-50%) scale(0.95)'
+            }
           }}
         >
-          <ChevronLeft sx={{ fontSize: { xs: 20, sm: 24 } }} />
+          <ChevronLeft sx={{ 
+            fontSize: { xs: 24, sm: 28, md: 32 },
+            fontWeight: 'bold'
+          }} />
         </IconButton>
 
         <IconButton
           onClick={nextSlide}
           sx={{
             position: 'absolute',
-            right: { xs: '1rem', sm: '2rem' },
+            right: { xs: '1rem', sm: '2rem', md: '3rem' },
             top: '50%',
             transform: 'translateY(-50%)',
             zIndex: 4,
-            backgroundColor: 'rgba(255,255,255,0.15)',
+            backgroundColor: 'rgba(255,255,255,0.2)',
             color: 'white',
-            border: '1px solid rgba(255,255,255,0.3)',
+            border: '2px solid rgba(255,255,255,0.4)',
+            backdropFilter: 'blur(10px)',
             '&:hover': {
-              backgroundColor: 'rgba(255,255,255,0.25)'
+              backgroundColor: 'rgba(255,255,255,0.3)',
+              borderColor: 'rgba(255,255,255,0.6)',
+              transform: 'translateY(-50%) scale(1.1)',
+              boxShadow: '0 8px 25px rgba(0,0,0,0.3)'
             },
             display: { xs: 'flex', md: 'flex' },
-            width: { xs: 40, sm: 48 },
-            height: { xs: 40, sm: 48 },
-            transition: 'all 0.2s ease'
+            width: { xs: 48, sm: 56, md: 64 },
+            height: { xs: 48, sm: 56, md: 64 },
+            transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            '&:active': {
+              transform: 'translateY(-50%) scale(0.95)'
+            }
           }}
         >
-          <ChevronRight sx={{ fontSize: { xs: 20, sm: 24 } }} />
+          <ChevronRight sx={{ 
+            fontSize: { xs: 24, sm: 28, md: 32 },
+            fontWeight: 'bold'
+          }} />
         </IconButton>
       </Box>
     </Box>
