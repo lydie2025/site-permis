@@ -10,31 +10,31 @@ const Hero = () => {
   
   const images = [
     {
-      src: "/HeroImage/permis-de-conduire.jpg",
+      src: "HeroImage/permis-de-conduire.jpg",
       title: "Permis de Conduire",
       subtitle: "Votre liberté commence ici",
       description: "Gestion complète de votre dossier permis avec accompagnement personnalisé"
     },
     {
-      src: "/HeroImage/carte-grise.jpg",
+      src: "HeroImage/carte-grise.jpg",
       title: "Carte Grise",
       subtitle: "Immatriculation simplifiée",
       description: "Démarches complètes pour immatriculation et gestion de votre carte grise"
     },
     {
-      src: "/HeroImage/dedouanement.jpg",
+      src: "HeroImage/dedouanement.jpg",
       title: "Dédouanement",
       subtitle: "Import/Export facilité",
       description: "Accompagnement complet pour l'import/export de vos véhicules"
     },
     {
-      src: "/HeroImage/plaque-immatrication.jpg",
+      src: "HeroImage/plaque-immatrication.jpg",
       title: "Plaques d'Immatriculation",
       subtitle: "Fabrication sur mesure",
       description: "Fabrication et pose de plaques conformes aux normes"
     },
     {
-      src: "/HeroImage/port-dedouanement.jpg",
+      src: "HeroImage/port-dedouanement.jpg",
       title: "Services Complets",
       subtitle: "Accompagnement personnalisé",
       description: "Solutions automobiles complètes avec expertise professionnelle"
