@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import { Menu, Close, Phone, Email, LocationOn } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo.jpg';
+// Logo est maintenant dans public/, pas besoin d'import
 import './navbar.css';
 
 const Navbar = () => {
@@ -83,7 +83,7 @@ const Navbar = () => {
           overflow: 'hidden'
         }}>
           <img 
-            src={logo} 
+            src="/logo.jpg" 
             alt="Global Car Consulting Logo" 
             style={{ 
               width: '100%', 
@@ -358,7 +358,7 @@ const Navbar = () => {
                   }
                 }}>
                   <img 
-                    src={logo} 
+                    src="/logo.jpg" 
                     alt="Global Car Consulting Logo" 
                     style={{ 
                       width: '100%', 
