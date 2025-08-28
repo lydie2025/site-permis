@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, IconButton, Typography, Button, Container } from "@mui/material";
 import { ArrowForward, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
-// Logo est maintenant dans public/, pas besoin d'import
+import logo from "../../assets/logo.jpg";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -138,7 +138,7 @@ const Hero = () => {
                 justifyContent: 'center'
               }}>
                 <img 
-                  src="/logo.jpg" 
+                  src={logo} 
                   alt="Global Car Consulting Logo" 
                   style={{ 
                     width: '100%', 
