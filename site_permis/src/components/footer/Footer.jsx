@@ -5,7 +5,7 @@ import {
 import { 
   Phone, Email, LocationOn, Facebook, Instagram, LinkedIn, DirectionsCar, School, Assignment, Support 
 } from '@mui/icons-material';
-import logo from '../../assets/logo.jpg';
+import logo from '/logo.jpg';
 import './Footer.css';
 
 const socialButtonStyle = {

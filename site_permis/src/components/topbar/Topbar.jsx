@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, IconButton, Stack } from '@mui/material';
 import { Phone, Email, LocationOn, Facebook, Instagram, LinkedIn } from '@mui/icons-material';
-import logo from '../../assets/logo.jpg';
+import logo from '/logo.jpg';
 import './topbar.css';
 
 const Topbar = () => {

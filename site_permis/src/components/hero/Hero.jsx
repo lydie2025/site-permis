@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, IconButton, Typography, Button, Container } from "@mui/material";
 import { ArrowForward, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { useNavigate } from 'react-router-dom';
-import logo from "../../assets/logo.jpg";
+import logo from "/logo.jpg";
 
 const Hero = () => {
   const navigate = useNavigate();

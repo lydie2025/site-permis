@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Stack } from '@mui/material';
 import { DirectionsCar, School, Assignment, Support } from '@mui/icons-material';
-import logo from '../../assets/logo.jpg';
+import logo from '/logo.jpg';
 import './header.css';
 
 const Header = () => {

@@ -17,7 +17,7 @@ import {
 } from '@mui/material';
 import { Menu, Close, Phone, Email, LocationOn } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo.jpg';
+import logo from '/logo.jpg';
 import './navbar.css';
 
 const Navbar = () => {
