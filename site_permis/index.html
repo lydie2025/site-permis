@@ -1,23 +1,35 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="/logo.jpg" />
-    <link rel="shortcut icon" href="/logo.jpg" />
-    <link rel="apple-touch-icon" href="/logo.jpg" />
-
-    <!-- Meta -->
+    <!-- Logo favicon -->
+    <link rel="icon" type="image/png" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Car Consulting</title>
+    <style>
+      /* Petit style pour placer le logo + nom en haut à gauche */
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        color: #0a0a0a;
+      }
 
-    <!-- Titre de l’onglet -->
-    <title>GLOBAL CAR CONSULTING</title>
+      .brand img {
+        height: 30px;
+        width: auto;
+      }
+    </style>
   </head>
   <body>
+
     <div id="root"></div>
-    
-    <!-- Script React -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
